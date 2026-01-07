@@ -1,0 +1,73 @@
+/* Base Styles */
+body {
+    background: #545151;
+    color: #f2ebeb;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url("images/Wikipedia.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+img {
+    width: 120px; /* Scaled down slightly for mobile */
+    height: auto;
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+/* Layout Containers */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.console-group div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: rgba(0,0,0,0.2); /* Makes images pop against BG */
+    border-radius: 10px;
+}
+
+/* Typography */
+h1.first { color: rgb(214, 71, 71); }
+h1.second { color: #333; margin-top: 40px; }
+h2 { color: rgb(19, 126, 16); }
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: right;
+    }
+    
+    img {
+        width: 150px;
+    }
+}
+
+.rob {
+    display: block;
+    margin: 40px auto 100px auto;
+    width: 75px;
+}
+
+.credits { 
+    position: relative; /* Changed from fixed so it doesn't cover content */
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+}
